@@ -1,0 +1,28 @@
+.edit-panel-page {
+  border: 1px solid black;
+  display: grid;
+  height: 100%;
+  grid-template-columns: auto 50px;
+  grid-column-gap: 1px;
+  grid-template-areas:
+    "left-menu right-menu";
+
+  &__left-menu {
+    grid-area: left-menu;
+  }
+  
+  &__general-menu {
+    border: 1px solid black;
+    grid-area: right-menu;
+    &__btn {
+      cursor: pointer;
+      border-bottom: 1px solid black;
+    }
+  }
+  img {
+    width: 100%;
+  }
+  .selected {
+    background-color: gray;
+  }
+}

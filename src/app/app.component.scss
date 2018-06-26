@@ -1,0 +1,13 @@
+.editor-page {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: auto 250px;
+  grid-template-areas: 
+    "map panel";
+  .map {
+    grid-area: map;
+  }
+  .panel {
+    grid-area: panel;
+  }
+}

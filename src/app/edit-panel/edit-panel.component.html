@@ -1,0 +1,18 @@
+<div class="edit-panel-page">
+  <div class="edit-panel-page__left-menu" [ngSwitch]="type">
+    <st-path-mode *ngSwitchCase="'createTrack'"></st-path-mode>
+    <st-checkpoint-mode *ngSwitchCase="'checkpoint'"></st-checkpoint-mode>
+  </div>
+  <div class="edit-panel-page__general-menu">
+    <div
+      class="edit-panel-page__general-menu__btn"
+      *ngFor="let option of options; let i = index" 
+      placement="left"
+      ngbTooltip="{{ option.name }}"
+      (click)="checkedType(option.sysName)"
+      [ngClass]="{'selected': type == option.sysName}"
+    >
+      <img src="{{ option.icon }}">
+    </div>
+  </div>
+</div>
